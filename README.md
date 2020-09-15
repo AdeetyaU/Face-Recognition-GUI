@@ -1,6 +1,8 @@
-# Face-Recognition-Attendance-Program :memo:
+# Face Recognition and Attendance Program GUI :memo:
 ![Face recog](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program/blob/master/README%20Images/face-recog.jpg)
-
+---------------------------
+##  For Command Line Interface Version, click [here](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program) (It runs faster than this, but it is a bit tricky to run it)
+---------------------------
 ## Features :clipboard:
 ---------------------------
 * Check Camera :camera:
@@ -16,7 +18,7 @@ Build With -
 
 Module Used -
 
-All The Module are Latest Version.
+All The Module are the Latest Version.
 * OpenCV Contrib 4.0.1
 * Pillow
 * Numpy
@@ -24,6 +26,7 @@ All The Module are Latest Version.
 * Shutil
 * CSV
 * yagmail
+* PySimpleGUI
 
 
 Face Recognition Algorithms -
@@ -51,7 +54,7 @@ Software Used -
 
   You can clone the project with git bash.To clone the project using git bash first open the git bash and write the following code
   ```
-  git clone https://github.com/AdeetyaU/Face-Recognition-Attendance-Program.git
+  git clone https://github.com/AdeetyaU/Face-Recognition-GUI.git
   ```
 
 #### 3. Now open this project on PyCharm and open terminal. Then enter the following commands:
@@ -68,7 +71,7 @@ Then activate the enviroment using the code below for windows.
 
 [ PS: If you have any issues with your venv, check this article then: (https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) ]
 
-#### 4. Installing the packages
+#### 4.1 Installing the packages
 ---------------------------
 After creating the enviroment on your project let's install the necessary packages.
 
@@ -81,6 +84,8 @@ py setup.py
 
 **If you get an error message, you need to manually install the package:**
 
+#### 4.2 Installing the packages manually (ONLY IF STEP 4.1 DID NOT WORK)
+---------------------------
 ![pip install demo](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program/blob/master/README%20Images/Pip%20install.gif)
 
 To install those package open the terminal or command line and paste the code from below
@@ -106,24 +111,27 @@ pip install python-csv
 ```
 pip install yagmail
 ```
+```
+pip install pysimplegui
+```
 After creating the enviroment and installing the packages, open the terminal to run the program. Using the code below.
 ```
 py main.py
 ```
 ![main py](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program/blob/master/README%20Images/pymainpy.gif)
 
-### And your program is good to go!
+### And your GUI is good to go!
 
 ## Frequently Asked Question
 
-###### 1. How do I close the camera window?
+###### 1. How do I close the camera window in Attendance Mode?
 
 *Answer: Press the key **q** on your keyboard*
 
 
 ###### 2. Does it work with Linux/Mac ?
 
-*Answer: Yes it does.*
+*Answer: A few commands in the program are Windows-Centric; however, I have not tested them yet in other Operating Systems. The CLI version of this works in both Linux and Mac. You can try it [here](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program)!*
 
 
 ###### 3. I can't install the required dependencies
@@ -133,7 +141,7 @@ py main.py
 
 ###### 4. Where is the attendance saved?
 
-*Answer: It is saved in the Attendance folder in a CSV format, you can open it using Excel*
+*Answer: It is saved in the Attendance folder in a CSV format, you can open it using File > Open Attendance Folder in the GUI*
 
 
 ###### 5. Where is terminal in PyCharm?
@@ -153,7 +161,7 @@ py main.py
 
 ###### 8. Is a virtual environment necessary?
 
-*Answer: No, however I highly reccomend it.*
+*Answer: No, however I highly recommend it.*
 
 
 ###### 9. Do I have to use Pycharm, can I use any other IDE?
@@ -167,8 +175,8 @@ py main.py
 
 #### Credits :gift_heart:
 ---------------------------
-Thanks to [KMHMubin](https://github.com/kmhmubin/) for the initial source code ! This is an updated version of the FRAS project, with a stricter (and more accurate) face detection algorithm and multiple glitch fixes!
+Thanks to [KMHMubin](https://github.com/kmhmubin/) for the initial source code ! This is an updated version of [my CLI based project](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program) with the addition of a GUI for an easier accessibility
 
 ## Next Update:
 ---------------------------
-Adding a GUI to make it look better :astonished:
+Making the loading time shorter :astonished:
