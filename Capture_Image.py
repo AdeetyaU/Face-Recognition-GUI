@@ -40,12 +40,13 @@ def takeImages():
         if event == sg.WIN_CLOSED or event == 'Cancel':  # if user closes window or clicks cancel
             window.close()
             break
+
         elif event == 'Submit':
             Id = values[0]
             name = values[1]
             window.close()
 
-    if(is_number(Id) and name.isalpha()):
+    if(is_number(Id) and name.isalpha()) and event == 'Submit':
         cam = cv2.VideoCapture(0, cv2.CAP_DSHOW)
         harcascadePath = "haarcascade_frontalface_default.xml"
         detector = cv2.CascadeClassifier(harcascadePath)

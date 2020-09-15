@@ -20,7 +20,7 @@ def mainMenu():
                [ sg.Button("Capture Face", size=(60, 2), font='Helvetica 14', button_color=('black', 'white')), sg.Button("Train Images", size=(60, 2), font='Helvetica 14', button_color=('black', 'white'))],
                [sg.Button("AutoMail", size=(60, 2), font='Helvetica 14', button_color=('black', 'white')), sg.Button("Quit", size=(60, 2), font='Helvetica 14', button_color=('white', 'red'))] ]
     window = sg.Window('Face Attendance Recognition Program', layout,auto_size_buttons=False, element_justification='c')
-    faceCascade,recognizer,df,minW,minH,font,cam= check_camera.initialize()
+    faceCascade,minW,minH,cam = check_camera.initialize()
     #Buttons and Menu
     while True:
         event, values = window.read(timeout=1)
@@ -71,7 +71,7 @@ def mainMenu():
             os.system("py automail.py")
             mainMenu()
             break
-        im = check_camera.cam(faceCascade,recognizer,df,minW,minH,font,cam)
+        im = check_camera.cam(faceCascade,minW,minH,cam)
         im = cv2.copyMakeBorder(im, 2, 2, 2, 2, cv2.BORDER_CONSTANT)
         imgbytes = cv2.imencode(".png", im)[1].tobytes()
         window["image"].update(data=imgbytes)
