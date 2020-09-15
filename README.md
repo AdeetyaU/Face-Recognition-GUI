@@ -132,7 +132,7 @@ py main.py
 ###### Now whenever you need to use the software, just:
 
 5. Once the training is complete, you can now click on Attendance Mode
-6. Once attendance is complete, just press *q* to quit on your keyboard and the Attendance will be saved!
+6. Once attendance is complete, just click *back to menu* to quit  and the Attendance will be saved!
 7. (Optional) You can also auto-email this to a person, just don't forget to initially add your password and email id to the python file!
 ---------------------------
 
@@ -140,9 +140,9 @@ py main.py
 
 ## Frequently Asked Question
 
-###### 1. How do I close the camera window in Attendance Mode?
+###### 1. How do I close the camera windows?
 
-*Answer: Press the key **q** on your keyboard*
+*Answer: Press the 'x' key or press the respective buttons below them*
 
 
 ###### 2. Does it work with Linux/Mac ?
