@@ -2,9 +2,9 @@
 ![Face recog](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program/blob/master/README%20Images/face-recog.jpg)
 
 ##  For Command Line Interface Version, click [here](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program) (It runs faster than this, but it is a bit tricky to run it)
----------------------------
+
 ## Features :clipboard:
----------------------------
+
 * Check Camera :camera:
 * Capture Faces
 * Train Faces
@@ -12,7 +12,7 @@
 * Automatic Email :email:
 
 ## Tech Used :computer:
----------------------------
+
 Build With -
 * Python 3.8
 
@@ -37,7 +37,7 @@ Software Used -
 * Pycharm 2020.2
 
 ## How to run :question:
----------------------------
+
 #### 1. Install PyCharm 2020.2 from [here](https://www.jetbrains.com/pycharm/download/) : https://www.jetbrains.com/pycharm/download/
 
 ![venv](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program/blob/master/README%20Images/pycharm.png)
