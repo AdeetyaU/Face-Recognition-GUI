@@ -62,7 +62,7 @@ Software Used -
 ```
 python -m venv env
 ```
-Then activate the enviroment using the code below for windows.
+Then activate the enviroment using the code below (Works in CMD as well as PyCharm)
 
 ```
 .\env\Scripts\activate
