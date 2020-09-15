@@ -1,6 +1,6 @@
 # Face Recognition and Attendance Program GUI :memo:
 ![Face recog](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program/blob/master/README%20Images/face-recog.jpg)
----------------------------
+
 ##  For Command Line Interface Version, click [here](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program) (It runs faster than this, but it is a bit tricky to run it)
 ---------------------------
 ## Features :clipboard:
@@ -118,7 +118,23 @@ After creating the enviroment and installing the packages, open the terminal to 
 ```
 py main.py
 ```
-![main py](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program/blob/master/README%20Images/pymainpy.gif)
+![GUI Interface](https://github.com/AdeetyaU/Face-Recognition-GUI/blob/master/README%20Images/Screenshot%202020-09-15%20124730.png)
+
+#### 5. How to Set up the Attendance System?
+---------------------------
+###### This is a process that only needs to be done once for a user:
+
+1. Click on Capture Face
+2. Enter Id and Name and press Submit
+3. Look into the Camera until the progress bar is completely. Then it will automatically close.
+4. **Then click on Train Images. This is important to do; otherwise, it will result in multiple errors**
+
+###### Now whenever you need to use the software, just:
+
+5. Once the training is complete, you can now click on Attendance Mode
+6. Once attendance is complete, just press *q* to quit on your keyboard and the Attendance will be saved!
+7. (Optional) You can also auto-email this to a person, just don't forget to initially add your password and email id to the python file!
+---------------------------
 
 ### And your GUI is good to go!
 
@@ -175,7 +191,7 @@ py main.py
 
 #### Credits :gift_heart:
 ---------------------------
-Thanks to [KMHMubin](https://github.com/kmhmubin/) for the initial source code ! This is an updated version of [my CLI based project](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program) with the addition of a GUI for an easier accessibility
+Thanks to [KMHMubin](https://github.com/kmhmubin/) for the initial source code ! This is an updated version of [my CLI based project](https://github.com/AdeetyaU/Face-Recognition-Attendance-Program) with the addition of a GUI for an easier accessibility and better looking interface!
 
 ## Next Update:
 ---------------------------
