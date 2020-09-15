@@ -19,7 +19,7 @@ while True:
         body = values[1]
         window.close()
     elif event == 'Default Settings':
-        receiver = "amazingadeetya88@gmail.com"
+        receiver = "recipient@recipient.com"
         body = "Attendance for Today"
         window.close()
 
@@ -31,7 +31,7 @@ newest = files[-1]
 filename = newest
 sub = "Attendance Report for " + str(date)
 # mail information
-yag = yagmail.SMTP("amazingadeetya88@gmail.com", "jlztweareoswptim")
+yag = yagmail.SMTP("youremail@email.com", "password")
 
 # sent the mail
 yag.send(
