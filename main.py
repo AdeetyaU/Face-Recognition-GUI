@@ -41,7 +41,7 @@ def mainMenu():
             sg.popup_timed("The Main Menu may be unresponsive during this process. It will automatically come back online, once the process is finished")
             os.system("py setup.py")
         elif event =="Visit Repo":
-            wb.open("https://github.com/AdeetyaU/Face-Recognition-Attendance-Program")
+            wb.open("https://github.com/AdeetyaU/Face-Recognition-GUI")
         elif event =="Creator":
             wb.open("https://github.com/AdeetyaU")
         elif event == "Version":
