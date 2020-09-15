@@ -8,10 +8,11 @@ import pandas as pd
 
 #-------------------------
 def recognize_attendence():
+    layout = [ [sg.Image(filename='', key='image')],[sg.Button("Back to Menu",size=(80,1))] ]
+    window = sg.Window('Attendance Mode', layout, auto_size_buttons=False, element_justification='c')
     recognizer = cv2.face.LBPHFaceRecognizer_create()  # cv2.createLBPHFaceRecognizer()
     recognizer.read("TrainingImageLabel"+os.sep+"Trainner.yml")
-    harcascadePath = "haarcascade_frontalface_default.xml"
-    faceCascade = cv2.CascadeClassifier(harcascadePath)
+    faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
     df = pd.read_csv("StudentDetails"+os.sep+"StudentDetails.csv")
     font = cv2.FONT_HERSHEY_SIMPLEX
     col_names = ['Id', 'Name', 'Date', 'Time']
@@ -26,6 +27,12 @@ def recognize_attendence():
     minH = 0.1 * cam.get(4)
 
     while True:
+        event, values = window.read(timeout=1)
+        if event == "Back to Menu" or event == sg.WIN_CLOSED:
+            cam.release()
+            cv2.destroyAllWindows()
+            window.close()
+            break
         ret, im = cam.read()
         gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
         faces = faceCascade.detectMultiScale(gray, 1.2, 5,minSize = (int(minW), int(minH)),flags = cv2.CASCADE_SCALE_IMAGE)
@@ -69,10 +76,8 @@ def recognize_attendence():
 
 
         attendance = attendance.drop_duplicates(subset=['Id'], keep='first')
-        cv2.imshow('Attendance Mode', im)
-
-        if (cv2.waitKey(1) == ord('q')):
-            break
+        imgbytes = cv2.imencode(".png", im)[1].tobytes()
+        window["image"].update(data=imgbytes)
 
 
     ts = time.time()

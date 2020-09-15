@@ -1,5 +1,4 @@
 import os
-import time
 import cv2
 import numpy as np
 from PIL import Image
@@ -40,10 +39,9 @@ def getImagesAndLabels(path):
 # ----------- train images function ---------------
 def TrainImages():
     recognizer = cv2.face_LBPHFaceRecognizer.create()
-    harcascadePath = "haarcascade_frontalface_default.xml"
-    detector = cv2.CascadeClassifier(harcascadePath)
+    detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
     faces, Id = getImagesAndLabels("TrainingImage")
-    Thread(target = recognizer.train(faces, np.array(Id))).start()
+    target = recognizer.train(faces, np.array(Id))
     recognizer.save("TrainingImageLabel"+os.sep+"Trainner.yml")
     sg.popup_auto_close('All Images Trained')
 

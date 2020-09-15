@@ -8,7 +8,7 @@ def clear():
         _ = system('cls')
     else:
         _ = system('clear')
-print("Installing Packages...")
+print("Installing Modules...")
 # implement pip as a subprocess:
 subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 'opencv-contrib-python'])

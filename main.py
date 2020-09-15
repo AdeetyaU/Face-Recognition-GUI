@@ -23,7 +23,7 @@ def mainMenu():
     faceCascade,minW,minH,cam = check_camera.initialize()
     #Buttons and Menu
     while True:
-        event, values = window.read(timeout=1)
+        event, values = window.read(timeout=0.1)
         if event == "Quit" or event == "Exit" or event == sg.WIN_CLOSED:
             cam.release()
             cv2.destroyAllWindows()

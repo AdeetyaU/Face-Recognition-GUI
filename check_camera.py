@@ -18,4 +18,4 @@ def cam(faceCascade,minW,minH,cam):
         faces = faceCascade.detectMultiScale(gray, 1.2, 5, minSize=(int(minW), int(minH)), flags=cv2.CASCADE_SCALE_IMAGE)
         for (x, y, w, h) in faces:
             cv2.rectangle(im, (x, y), (x + w, y + h), (10, 159, 255), 2)
-            return im
+        return im
